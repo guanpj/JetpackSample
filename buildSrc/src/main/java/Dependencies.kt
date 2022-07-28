@@ -1,7 +1,7 @@
 object Versions {
-    const val compileSdkVersion = 30
+    const val compileSdkVersion = 31
     const val minSdkVersion = 23
-    const val targetSdkVersion = 30
+    const val targetSdkVersion = 31
     const val lifecycle_version = "2.3.1"
     const val fragment_ktx_version = "1.3.6"
     const val picasso_version = "2.71828"
