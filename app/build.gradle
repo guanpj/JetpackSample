@@ -2,14 +2,15 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdk 32
+    compileSdk Versions.compileSdkVersion
 
     defaultConfig {
         applicationId "com.me.guanpj.jetpack.sample"
-        minSdk 21
-        targetSdk 32
+        minSdk Versions.minSdkVersion
+        targetSdk Versions.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
