@@ -14,3 +14,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "JetpackSample"
 include ':app'
+include ':appbase'
+include ':module_city'
+include ':module_risk_level'
+include ':module_test_agency'
+include ':module_travel_policy'
