@@ -32,3 +32,5 @@ object Libs {
     const val arouter_api = "com.alibaba:arouter-api:${Versions.arouter_api_version}"
     const val arouter_compiler = "com.alibaba:arouter-compiler:${Versions.arouter_compiler_version}"
 }
+
+public val isModule = false

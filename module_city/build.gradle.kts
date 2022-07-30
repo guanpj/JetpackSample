@@ -1,6 +1,11 @@
 plugins {
-    id("com.android.library")
+    if (isModule) {
+        id("com.android.application")
+    } else {
+        id("com.android.library")
+    }
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -11,8 +16,22 @@ android {
         minSdk = 24
         targetSdk = 32
 
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.name)
+            }
+        }
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+    }
+
+    sourceSets["main"].manifest {
+        if (isModule) {
+            srcFile("src/main/module/AndroidManifest.xml")
+        } else {
+            srcFile("src/main/AndroidManifest.xml")
+        }
     }
 
     buildTypes {
@@ -30,6 +49,13 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    viewBinding {
+        isEnabled = true
+    }
+
+    dataBinding {
+        isEnabled = true
     }
 }
 

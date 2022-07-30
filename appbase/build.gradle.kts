@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -10,6 +11,12 @@ android {
     defaultConfig {
         minSdk = 24
         targetSdk = 32
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.name)
+            }
+        }
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -30,6 +37,13 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    viewBinding {
+        isEnabled = true
+    }
+
+    dataBinding {
+        isEnabled = true
     }
 }
 
