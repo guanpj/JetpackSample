@@ -2,10 +2,22 @@ package com.me.guanpj.jetpack.sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.me.guanpj.appbase.BaseActivity
+import com.me.guanpj.jetpack.sample.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        initEvent()
     }
+
+    private fun initEvent() {
+        mViewBinding.llAgency.setOnClickListener {
+            ARou
+        }
+    }
+
+    override fun getViewBinding(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
 }
