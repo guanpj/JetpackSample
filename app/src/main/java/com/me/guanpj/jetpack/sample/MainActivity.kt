@@ -15,7 +15,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun initEvent() {
         mViewBinding.llAgency.setOnClickListener {
-            ARou
         }
     }
 

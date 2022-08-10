@@ -1,6 +1,6 @@
 object Versions {
     const val compileSdkVersion = 31
-    const val minSdkVersion = 23
+    const val minSdkVersion = 24
     const val targetSdkVersion = 31
     const val lifecycle_version = "2.3.1"
     const val fragment_ktx_version = "1.3.6"
@@ -8,8 +8,8 @@ object Versions {
     const val retrofit_version = "2.9.0"
     const val logging_interceptor_version = "4.7.2"
     const val coroutines_version = "1.4.1"
-    const val arouter_api_version = "1.5.0"
-    const val arouter_compiler_version = "1.2.2"
+    const val arouter_api_version = "1.4.0"
+    const val arouter_compiler_version = "1.2.1"
 }
 
 object Libs {
