@@ -55,4 +55,17 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+
+    api(Libs.livedata_ktx)
+    api(Libs.viewmodel_ktx)
+    api(Libs.viewmodel)
+    api(Libs.fragment_ktx)
+
+    api(Libs.retofit)
+    api(Libs.converter_gson)
+    api(Libs.logging_interceptor)
+    api(Libs.coroutines)
+    api(Libs.coroutines_android)
+    implementation(Libs.arouter_api)
+    implementation(Libs.arouter_compiler)
 }
