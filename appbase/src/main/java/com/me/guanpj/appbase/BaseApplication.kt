@@ -6,12 +6,12 @@ import com.alibaba.android.arouter.launcher.ARouter
 
 class BaseApplication : Application() {
     companion object {
-        lateinit var appContext: Context
+        lateinit var context: Context
     }
 
     override fun onCreate() {
         super.onCreate()
-        appContext = this
+        context = this
         ARouter.init(this)
         ARouter.openDebug()
     }
