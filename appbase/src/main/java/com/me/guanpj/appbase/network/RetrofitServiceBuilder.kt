@@ -1,5 +1,6 @@
 package com.me.guanpj.appbase.network
 
+import android.util.Log
 import android.widget.Toast
 import com.me.guanpj.appbase.BaseApplication
 import com.me.guanpj.appbase.R
@@ -52,6 +53,7 @@ object RetrofitServiceBuilder {
         //添加日志拦截器
         val interceptor = HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
             override fun log(message: String) {
+                Log.d("OkHttp", message);
                 HttpLoggingInterceptor.Logger.DEFAULT.log(message)
             }
         })

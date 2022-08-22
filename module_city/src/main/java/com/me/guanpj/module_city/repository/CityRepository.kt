@@ -8,7 +8,5 @@ import com.me.guanpj.module_city.bean.CityDataBean
 class CityRepository {
     private val network = RetrofitServiceBuilder.createService(CityApi::class.java)
 
-    suspend fun getCityData(): BaseReqData<List<CityDataBean>>? {
-        return network?.getCityData()
-    }
+    suspend fun getCityData(): BaseReqData<List<CityDataBean>>? = network?.getCityData()
 }
