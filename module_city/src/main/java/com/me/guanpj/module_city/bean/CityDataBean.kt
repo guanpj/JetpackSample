@@ -1,4 +1,4 @@
-package com.me.guanpj.module.city.bean
+package com.me.guanpj.module_city.bean
 
 import com.me.guanpj.appbase.util.Cn2SpellUtil
 import java.util.*

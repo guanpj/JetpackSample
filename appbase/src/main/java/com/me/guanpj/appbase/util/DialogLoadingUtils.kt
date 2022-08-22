@@ -1,8 +1,8 @@
 package com.me.guanpj.appbase.util
 
 import android.content.Context
-import com.hlq.appbase.expand.defaultDialogView
-import com.hlq.appbase.tools.LoadingDialog
+import com.me.guanpj.appbase.widget.LoadingDialog
+import com.me.guanpj.appbase.ext.defaultDialogView
 
 object DialogLoadingUtils {
 

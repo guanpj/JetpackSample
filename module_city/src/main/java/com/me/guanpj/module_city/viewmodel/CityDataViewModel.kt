@@ -1,4 +1,4 @@
-package com.me.guanpj.module.city.viewmodel
+package com.me.guanpj.module_city.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData

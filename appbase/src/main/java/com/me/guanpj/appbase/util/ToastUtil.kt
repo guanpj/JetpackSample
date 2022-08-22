@@ -1,7 +1,7 @@
 package com.me.guanpj.appbase.util
 
 import android.widget.Toast
-import com.hlq.appbase.BaseApplication
+import com.me.guanpj.appbase.BaseApplication
 
 object ToastUtil {
 
