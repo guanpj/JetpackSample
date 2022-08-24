@@ -19,7 +19,7 @@ android {
         }
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        //consumerProguardFiles(arrayOf("consumer-rules.pro"))
     }
 
     buildTypes {

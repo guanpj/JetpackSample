@@ -11,7 +11,10 @@ abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mViewBinding = getViewBinding()
         setContentView(mViewBinding.root)
+        initViewAndData()
     }
+
+    abstract fun initViewAndData()
 
     abstract fun getViewBinding(): T
 }

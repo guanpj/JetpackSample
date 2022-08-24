@@ -11,6 +11,7 @@ object ARouterConfig {
      */
     const val AGENCY_MESSAGE = "/agency/message"
 
+    const val ggg = "/aaa/ggg"
 
     /**
      * 风险等级查询
