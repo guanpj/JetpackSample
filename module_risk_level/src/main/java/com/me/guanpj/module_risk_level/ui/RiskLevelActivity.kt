@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.me.guanpj.appbase.BaseActivity
 import com.me.guanpj.appbase.config.ARouterConfig
+import com.me.guanpj.appbase.ext.inflate
 import com.me.guanpj.appbase.util.DialogLoadingUtils
 import com.me.guanpj.module_risk_level.bean.DataTypeEnum
 import com.me.guanpj.module_risk_level.bean.RiskLevelDetailBean
@@ -12,8 +13,9 @@ import com.me.guanpj.module_risk_level.databinding.ActivityRiskLevelBinding
 import com.me.guanpj.module_risk_level.viewmodel.RiskLevelViewModel
 
 @Route(path = ARouterConfig.RISK_LEVEL)
-class RiskLevelActivity : BaseActivity<ActivityRiskLevelBinding>() {
+class RiskLevelActivity : BaseActivity() {
 
+    private val mViewBinding by inflate(ActivityRiskLevelBinding::inflate)
     private val riskLevelViewModel by viewModels<RiskLevelViewModel>()
 
     override fun initViewAndData() {
@@ -50,7 +52,4 @@ class RiskLevelActivity : BaseActivity<ActivityRiskLevelBinding>() {
             }
         }
     }
-
-
-    override fun getViewBinding(): ActivityRiskLevelBinding = ActivityRiskLevelBinding.inflate(layoutInflater)
 }

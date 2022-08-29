@@ -9,6 +9,7 @@ import com.me.guanpj.appbase.BaseActivity
 import com.me.guanpj.appbase.config.ARouterConfig
 import com.me.guanpj.appbase.config.ParametersConfig
 import com.me.guanpj.appbase.config.ResultCodeConfig
+import com.me.guanpj.appbase.ext.inflate
 import com.me.guanpj.appbase.util.DialogLoadingUtils
 import com.me.guanpj.module_city.R
 import com.me.guanpj.module_city.bean.CityDataBean
@@ -16,7 +17,9 @@ import com.me.guanpj.module_city.databinding.ActivityCityDataBinding
 import com.me.guanpj.module_city.viewmodel.CityDataViewModel
 
 @Route(path = ARouterConfig.CITY_DATA)
-class CityDataActivity : BaseActivity<ActivityCityDataBinding>() {
+class CityDataActivity : BaseActivity() {
+
+    private val mViewBinding by inflate(ActivityCityDataBinding::inflate)
 
     private val cityDataViewModel by viewModels<CityDataViewModel>()
     val cityList = mutableListOf<CityDataBean.CityBean>()
@@ -88,6 +91,4 @@ class CityDataActivity : BaseActivity<ActivityCityDataBinding>() {
             }
         }
     }
-
-    override fun getViewBinding(): ActivityCityDataBinding  = ActivityCityDataBinding.inflate(layoutInflater)
 }

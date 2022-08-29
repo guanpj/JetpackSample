@@ -9,13 +9,15 @@ import com.me.guanpj.appbase.config.ARouterConfig
 import com.me.guanpj.appbase.config.ParametersConfig
 import com.me.guanpj.appbase.config.RequestCodeConfig
 import com.me.guanpj.appbase.config.ResultCodeConfig
+import com.me.guanpj.appbase.ext.inflate
 import com.me.guanpj.appbase.util.DialogLoadingUtils
 import com.me.guanpj.module_travel_policy.databinding.ActivityTravelPolicyBinding
 import com.me.guanpj.module_travel_policy.viewmodel.TravelPolicyViewModel
 
 @Route(path = ARouterConfig.TRAVEL_POLICY)
-class TravelPolicyActivity : BaseActivity<ActivityTravelPolicyBinding>() {
+class TravelPolicyActivity : BaseActivity() {
 
+    private val mViewBinding by inflate(ActivityTravelPolicyBinding::inflate)
     private val travelPolicyViewModel by viewModels<TravelPolicyViewModel>()
 
     var fromCityId: String? = null
@@ -75,6 +77,4 @@ class TravelPolicyActivity : BaseActivity<ActivityTravelPolicyBinding>() {
             }
         }
     }
-
-    override fun getViewBinding(): ActivityTravelPolicyBinding = ActivityTravelPolicyBinding.inflate(layoutInflater)
 }

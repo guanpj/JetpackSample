@@ -10,14 +10,16 @@ import com.me.guanpj.appbase.config.ARouterConfig
 import com.me.guanpj.appbase.config.ParametersConfig
 import com.me.guanpj.appbase.config.RequestCodeConfig
 import com.me.guanpj.appbase.config.ResultCodeConfig
+import com.me.guanpj.appbase.ext.inflate
 import com.me.guanpj.appbase.util.DialogLoadingUtils
 import com.me.guanpj.module_test_agency.R
 import com.me.guanpj.module_test_agency.databinding.ActivityAgencyMessageBinding
 import com.me.guanpj.module_test_agency.viewmodel.AgencyViewModel
 
 @Route(path = ARouterConfig.AGENCY_MESSAGE)
-class AgencyMessageActivity : BaseActivity<ActivityAgencyMessageBinding>() {
+class AgencyMessageActivity : BaseActivity() {
 
+    private val mViewBinding by inflate(ActivityAgencyMessageBinding::inflate)
     private val agencyViewModel by viewModels<AgencyViewModel>()
 
     override fun initViewAndData() {
@@ -58,6 +60,4 @@ class AgencyMessageActivity : BaseActivity<ActivityAgencyMessageBinding>() {
             }
         }
     }
-
-    override fun getViewBinding(): ActivityAgencyMessageBinding = ActivityAgencyMessageBinding.inflate(layoutInflater)
 }
